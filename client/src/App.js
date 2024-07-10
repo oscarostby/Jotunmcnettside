@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/main';
+import Rules from './pages/rules';
+import Abus from './pages/aboutus';
+import Contact from './pages/contact';
 
 
 
@@ -25,6 +28,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/regler" element={<Rules />} />
+        <Route path="/om-oss" element={<Abus />} />
+        <Route path="/kontakt" element={<Contact />} />
+
+
+
 
 
       </Routes>

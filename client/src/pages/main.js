@@ -44,6 +44,12 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 23px;
+    }
+  }
 `;
 
 const fadeIn = keyframes`
@@ -210,10 +216,9 @@ const StoreItem = styled.div`
   }
 `;
 
-
 const StoreItemImage = styled.div`
   width: 100%;
-  padding-top: 100%; // This creates a 1:1 aspect ratio (square)
+  padding-top: 100%;
   position: relative;
   overflow: hidden;
 
@@ -317,12 +322,44 @@ const ThemeToggle = styled.button`
   position: fixed;
   top: 20px;
   right: 20px;
-  background: none;
+  background: ${props => props.theme.card};
   border: none;
   color: ${props => props.theme.text};
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    top: 13px;
+    width: 40px;
+    height: 40px;
+  }
+`;
+
+const StyledHeader = styled(Header)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+`;
+
+const MobileSpacing = styled.div`
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
 const App = () => {
@@ -357,7 +394,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <Header />
+      <MobileSpacing />
+      <StyledHeader />
       <ThemeToggle onClick={toggleTheme}>
         {theme === 'light' ? <FaMoon /> : <FaSun />}
       </ThemeToggle>
@@ -417,48 +455,48 @@ const App = () => {
       </Features>
 
       <Store>
-  <Container>
-    <SectionTitle>Serverbutikk</SectionTitle>
-    <StoreGrid>
-      <StoreItem>
-        <StoreItemImage>
-          <img src="https://i.ibb.co/MgFM3GD/49929125-47aa-4347-95e4-54c516629149.jpg" alt="VIP Rang" />
-        </StoreItemImage>
-        <StoreItemContent>
-          <div>
-            <StoreItemTitle>VIP Rang</StoreItemTitle>
-            <StoreItemDescription>Få eksklusive fordeler og goder som VIP-spiller. Inkluderer spesielle kosmetiske effekter, prioritert servertilgang og mer!</StoreItemDescription>
-          </div>
-          <StoreItemButton>Kjøp nå</StoreItemButton>
-        </StoreItemContent>
-      </StoreItem>
-      <StoreItem>
-        <StoreItemImage>
-          <img src="https://via.placeholder.com/400x400?text=Kosmetisk+Pakke" alt="Kosmetisk Pakke" />
-        </StoreItemImage>
-        <StoreItemContent>
-          <div>
-            <StoreItemTitle>Kosmetisk Pakke</StoreItemTitle>
-            <StoreItemDescription>Lås opp unike skins og emotes for å skille deg ut på serveren. Inneholder eksklusive norrøn-inspirerte kosmetiske elementer.</StoreItemDescription>
-          </div>
-          <StoreItemButton>Kjøp nå</StoreItemButton>
-        </StoreItemContent>
-      </StoreItem>
-      <StoreItem>
-        <StoreItemImage>
-          <img src="https://via.placeholder.com/400x400?text=Ressursbundle" alt="Ressursbundle" />
-        </StoreItemImage>
-        <StoreItemContent>
-          <div>
-            <StoreItemTitle>Ressursbundle</StoreItemTitle>
-            <StoreItemDescription>Boost spillopplevelsen din med ekstra ressurser. Denne pakken inneholder sjeldne materialer og verktøy for å gi deg en flying start.</StoreItemDescription>
-          </div>
-          <StoreItemButton>Kjøp nå</StoreItemButton>
-        </StoreItemContent>
-      </StoreItem>
-    </StoreGrid>
-  </Container>
-</Store>
+        <Container>
+          <SectionTitle>Serverbutikk</SectionTitle>
+          <StoreGrid>
+            <StoreItem>
+              <StoreItemImage>
+                <img src="https://i.ibb.co/MgFM3GD/49929125-47aa-4347-95e4-54c516629149.jpg" alt="VIP Rang" />
+              </StoreItemImage>
+              <StoreItemContent>
+                <div>
+                  <StoreItemTitle>VIP Rang</StoreItemTitle>
+                  <StoreItemDescription>Få eksklusive fordeler og goder som VIP-spiller. Inkluderer spesielle kosmetiske effekter, prioritert servertilgang og mer!</StoreItemDescription>
+                </div>
+                <StoreItemButton>Kjøp nå</StoreItemButton>
+              </StoreItemContent>
+            </StoreItem>
+            <StoreItem>
+              <StoreItemImage>
+                <img src="https://via.placeholder.com/400x400?text=Kosmetisk+Pakke" alt="Kosmetisk Pakke" />
+              </StoreItemImage>
+              <StoreItemContent>
+                <div>
+                  <StoreItemTitle>Kosmetisk Pakke</StoreItemTitle>
+                  <StoreItemDescription>Lås opp unike skins og emotes for å skille deg ut på serveren. Inneholder eksklusive norrøn-inspirerte kosmetiske elementer.</StoreItemDescription>
+                </div>
+                <StoreItemButton>Kjøp nå</StoreItemButton>
+              </StoreItemContent>
+            </StoreItem>
+            <StoreItem>
+              <StoreItemImage>
+                <img src="https://via.placeholder.com/400x400?text=Ressursbundle" alt="Ressursbundle" />
+              </StoreItemImage>
+              <StoreItemContent>
+                <div>
+                  <StoreItemTitle>Ressursbundle</StoreItemTitle>
+                  <StoreItemDescription>Boost spillopplevelsen din med ekstra ressurser. Denne pakken inneholder sjeldne materialer og verktøy for å gi deg en flying start.</StoreItemDescription>
+                </div>
+                <StoreItemButton>Kjøp nå</StoreItemButton>
+              </StoreItemContent>
+            </StoreItem>
+          </StoreGrid>
+        </Container>
+      </Store>
 
       <Newsletter>
         <Container>
