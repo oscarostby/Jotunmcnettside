@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const FooterWrapper = styled.footer`
-  background-color: #0f172a;
+  background-color: #1e293b;
   color: ${props => props.theme.text};
   padding: 3rem 2rem;
 `;

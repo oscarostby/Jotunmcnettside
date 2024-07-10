@@ -19,7 +19,7 @@ const darkTheme = {
   text: '#e2e8f0',
   primary: '#4299e1',
   secondary: '#38b2ac',
-  background: '#2d3748',
+  background: '#1e293b',
   card: '#2d3748',
   heroGradient: 'linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%)',
 };
