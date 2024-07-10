@@ -174,7 +174,7 @@ const Header = () => {
           <NavLink to="/regler" onClick={toggleMenu}>Regler</NavLink>
           <NavLink to="/stab" onClick={toggleMenu}>Stab</NavLink>
           <NavLink to="/kontakt" onClick={toggleMenu}>Kontakt</NavLink>
-          <DiscordButton href="https://discord.gg/your-discord-invite" target="_blank" rel="noopener noreferrer">
+          <DiscordButton href="https://discord.gg/wGSjZGEvHW" target="_blank" rel="noopener noreferrer">
             <FaDiscord /> Discord
           </DiscordButton>
         </NavLinks>
