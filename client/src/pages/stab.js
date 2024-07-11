@@ -259,11 +259,11 @@ const ThemeToggle = styled.button`
 `;
 
 const staffMembers = [
-  { name: "Enderman", role: "Eier", image: avatarBody5, icon: FaCrown, discord: "#" },
-  { name: "Steve", role: "Eier", image: avatarBody3, icon: FaCrown, discord: "#" },
-  { name: "Alex", role: "Moderator", image: avatarBody2, icon: FaWrench, discord: "#" },
-  { name: "Creeper", role: "Moderator", image: avatarBody4, icon: FaWrench, discord: "#" },
-  { name: "Villager", role: "Moderator", image: avatarBody6, icon: FaWrench, discord: "#" },
+  { name: "P1ere", role: "Eier", image: avatarBody5, icon: FaCrown, discord: "#" },
+  { name: "Drkolore", role: "Eier", image: avatarBody3, icon: FaCrown, discord: "#" },
+  { name: "Solbakkenunge", role: "Moderator", image: avatarBody2, icon: FaWrench, discord: "#" },
+  { name: "Sttrake", role: "Moderator", image: avatarBody4, icon: FaWrench, discord: "#" },
+  { name: "Panqada", role: "Moderator", image: avatarBody6, icon: FaWrench, discord: "#" },
 ];
 
 const StaffPage = () => {
