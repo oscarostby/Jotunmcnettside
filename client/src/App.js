@@ -4,7 +4,7 @@ import Home from './pages/main';
 import Rules from './pages/rules';
 import Abus from './pages/aboutus';
 import Contact from './pages/contact';
-
+import Stab from './pages/stab';
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
         <Route path="/regler" element={<Rules />} />
         <Route path="/om-oss" element={<Abus />} />
         <Route path="/kontakt" element={<Contact />} />
+        <Route path="/stab" element={<Stab />} />
 
 
 
