@@ -4,6 +4,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FaDiscord, FaStore, FaUsers, FaNewspaper, FaSun, FaMoon } from 'react-icons/fa';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Modal from '../components/modal';
+
 
 const lightTheme = {
   body: '#f0f4f8',
@@ -13,6 +15,10 @@ const lightTheme = {
   background: '#ffffff',
   card: '#ffffff',
   heroGradient: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)',
+  modal: {
+    background: '#e0e0e0',
+    text: '#333333',
+  },
 };
 
 const darkTheme = {
@@ -23,6 +29,10 @@ const darkTheme = {
   background: '#1e293b',
   card: '#334155',
   heroGradient: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+  modal: {
+    background: '#1a1a2e',
+    text: '#ffffff',
+  },
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -367,6 +377,7 @@ const App = () => {
   const [playerCount, setPlayerCount] = useState(0);
   const [email, setEmail] = useState('');
   const [theme, setTheme] = useState('dark');
+  const [showModal, setShowModal] = useState(false);
 
   const handleCopy = () => {
     setCopied(true);
@@ -381,6 +392,14 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     console.log('Abonnert:', email);
@@ -389,6 +408,10 @@ const App = () => {
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -514,6 +537,8 @@ const App = () => {
         </Container>
       </Newsletter>
       <Footer />
+
+      <Modal isOpen={showModal} onClose={closeModal} />
     </ThemeProvider>
   );
 };
