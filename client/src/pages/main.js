@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { createGlobalStyle, keyframes, ThemeProvider } from 'styled-components';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FaDiscord, FaStore, FaUsers, FaNewspaper, FaSun, FaMoon } from 'react-icons/fa';
+import { FaDiscord, FaStore, FaUsers, FaNewspaper, FaSun, FaMoon, FaGlobe } from 'react-icons/fa';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Modal from '../components/modal';
@@ -139,6 +139,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  text-decoration: none;
 
   &:hover {
     transform: translateY(-2px);
@@ -432,8 +433,7 @@ const App = () => {
               <Button primary>
                 <FaDiscord /> Bli med på Discord
               </Button>
-              <Button>
-                <FaStore /> Besøk butikken
+              <Button as="a" href="/webkart"><FaGlobe /> Webkart
               </Button>
             </ButtonGroup>
             <ServerInfo>

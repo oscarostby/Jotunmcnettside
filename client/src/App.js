@@ -5,7 +5,7 @@ import Rules from './pages/rules';
 import Abus from './pages/aboutus';
 import Contact from './pages/contact';
 import Stab from './pages/stab';
-
+import Kart from './pages/kart';
 
 function App() {
   useEffect(() => {
@@ -32,6 +32,8 @@ function App() {
         <Route path="/om-oss" element={<Abus />} />
         <Route path="/kontakt" element={<Contact />} />
         <Route path="/stab" element={<Stab />} />
+        <Route path="/webkart" element={<Kart />} />
+
 
 
 
