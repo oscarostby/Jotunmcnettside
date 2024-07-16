@@ -487,15 +487,15 @@ const App = () => {
               </StoreItemImage>
               <StoreItemContent>
                 <div>
-                  <StoreItemTitle>VIP Rang</StoreItemTitle>
-                  <StoreItemDescription>Få eksklusive fordeler og goder som VIP-spiller. Inkluderer spesielle kosmetiske effekter, prioritert servertilgang og mer!</StoreItemDescription>
+                  <StoreItemTitle>VIP Rank</StoreItemTitle>
+                  <StoreItemDescription>Få eksklusive fordeler og goder som VIP-spiller. Inkluderer spesielle kosmetiske effekter og mer!</StoreItemDescription>
                 </div>
                 <StoreItemButton>Kjøp nå</StoreItemButton>
               </StoreItemContent>
             </StoreItem>
             <StoreItem>
               <StoreItemImage>
-                <img src="https://via.placeholder.com/400x400?text=Kosmetisk+Pakke" alt="Kosmetisk Pakke" />
+              <img src="https://via.placeholder.com/400x400?text=kommer snart" alt="kommer snart" />
               </StoreItemImage>
               <StoreItemContent>
                 <div>
@@ -507,7 +507,7 @@ const App = () => {
             </StoreItem>
             <StoreItem>
               <StoreItemImage>
-                <img src="https://via.placeholder.com/400x400?text=Ressursbundle" alt="Ressursbundle" />
+                <img src="https://via.placeholder.com/400x400?text=kommer snart" alt="kommer snart" />
               </StoreItemImage>
               <StoreItemContent>
                 <div>
