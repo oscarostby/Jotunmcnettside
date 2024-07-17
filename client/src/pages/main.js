@@ -443,7 +443,7 @@ const App = () => {
               </CopyToClipboard>
             </ServerInfo>
             <PlayerCount>
-              <FaUsers style={{ marginRight: '0.5rem' }} /> Spillere pålogget: {playerCount}
+              <br></br>
             </PlayerCount>
           </HeroContent>
         </Container>
