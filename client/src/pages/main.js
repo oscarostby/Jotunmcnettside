@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled, { createGlobalStyle, keyframes, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, keyframes, ThemeProvider  } from 'styled-components';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FaDiscord, FaStore, FaUsers, FaNewspaper, FaSun, FaMoon, FaGlobe } from 'react-icons/fa';
+import { FaDiscord, FaStore, FaUsers, FaNewspaper, FaSun, FaMoon, FaGlobe, FaVoteYea } from 'react-icons/fa';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Modal from '../components/modal';
@@ -430,9 +430,15 @@ const App = () => {
             <HeroTitle>Velkommen til Jotunheim MC</HeroTitle>
             <HeroSubtitle>Begiv deg ut på et episk norrønt eventyr</HeroSubtitle>
             <ButtonGroup>
-              <Button primary>
-                <FaDiscord /> Bli med på Discord
-              </Button>
+            <a href="https://minecraftservers.org/server/664417" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+  <Button primary>
+    <FaVoteYea />
+    Stem på oss
+  </Button>
+</a>
+
+
+
               <Button as="a" href="/webkart"><FaGlobe /> Webkart
               </Button>
             </ButtonGroup>
