@@ -79,7 +79,7 @@ const MapPage = () => {
         <StyledHeader />
         <MapContainer>
           <iframe
-            src="http://kart.jotunmc.no:60444/"
+            src="https://kart.jotunmc.no/"
             width="100%"
             height="100%"
             frameBorder="0"
